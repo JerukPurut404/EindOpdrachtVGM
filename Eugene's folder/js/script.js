@@ -23,7 +23,7 @@ function facebook() {
     console.log("Hide Menu");
   }
   cheet("↑ ↑ ↓ ↓ ← → ← → b a", function () {
-    window.open("https://github.com/JerukPurut404/JerukPurut404");
+    window.open("easteregg.html");
   });
   let imageContainer = document.getElementsByClassName("slideshow-container")[0];
   let images = imageContainer.querySelectorAll('img');
