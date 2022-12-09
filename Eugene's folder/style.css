@@ -3,7 +3,11 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-.header
+
+html{
+  box-sizing: border-box;
+}
+header
 {
   min-height: 100vh;
   width: 100%;
@@ -11,40 +15,30 @@
   background-position: 25% 75%;
   background-size: cover;
   position: relative;
-}
-.button-header{
-  padding: 30px;
-  text-align: center;
+  overflow-x: hidden;
 }
 
 .image-container{
-  margin-left: 10px;
-  margin-right: 700px;
-}
-.nav{
   display: flex;
-  padding: 4% 9%;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
 }
-.nav img{
-  width: 150px;
-}
+
 .nav-links{
   flex: 1;
   text-align: right;
 }
-.nav-links ul li{
+/*.nav-links ul li{
   list-style: none;
   display: inline-block;
   padding: 8px 12px;
   position: relative;
-}
+}*/
 .nav-links ul li a{
   color: aqua;
   text-decoration: none;
   font-size: 13px;
 }
+/*
 .nav-links ul li::after{
   content: '';
   width: 0%;
@@ -56,6 +50,57 @@
 }
 .nav-links ul li:hover::after{
   width: 100%;
+}
+*/
+/* Slideshow container */
+.slideshow-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+.slideshow-container figure{
+  position: relative;
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+}
+.slideshow-container img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500px;
+  height: 300px;
+  transition: all 0.5s ease-in-out;
+}
+#prev{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#next{
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+}
+.slideshow-container img.hidden{
+  left: 500px;
+}
+
+.button-header{
+  padding: 30px;
+  text-align: center;
+  text-decoration: none;
 }
 
 .text-box{
@@ -95,15 +140,22 @@
 nav .fa{
   display: none;
 }
+
 @media(max-width: 700px){
+  .image-container img{
+    display: flex;
+    justify-content: center;
+
+  }
   .button-header{
     padding: 0px;
   }
   .text-box h1{
     font-size: 20px;
   }
-  .nav-links ul li{
+  .nav-links a{
     display: block;
+    margin: 10px;
   }
   .nav-links{
     position: absolute;
@@ -125,6 +177,9 @@ nav .fa{
     margin: 10px;
     font-size: 22px;
     cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
   .nav-links ul{
     padding: 30px;
@@ -158,6 +213,8 @@ p{
   margin-top: 5%;
   display: flex;
   justify-content: space-between;
+  padding: 0 !important;
+  margin: 0 !important;
 }
 .TimeSlots-col{
   flex-basis: 31%;
@@ -180,6 +237,8 @@ p{
 @media(max-width: 700px){
   .row{
     flex-wrap: wrap;
+    padding: 0 !important;
+    margin: 0 !important;
   }
 }
 
@@ -228,17 +287,17 @@ p{
     margin-right: 15px;
   }
 }
-.Footers{
+footer{
   width: 100%;
   text-align: center;
   padding: 30px 0;
 }
-.Footers h4{
+footer h4{
   margin-bottom: 25px;
   margin-top: 20px;
   font-weight: 600;
 }
-.Footers-icons .fa{
+.footers-icons .fa{
   color: #f44336;
   margin: 0 13px;
   cursor: pointer;
