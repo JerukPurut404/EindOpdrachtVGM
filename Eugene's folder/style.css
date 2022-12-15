@@ -127,9 +127,11 @@ nav .fa{
 }
 
 @media(max-width: 700px){
-  .image-container img{
+  .slideshow-container img{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    width: 155px;
+    height: 300px;
 
   }
   .button-header{
@@ -286,7 +288,7 @@ p{
 footer{
   width: 100%;
   text-align: center;
-  padding: 30px 0;
+  padding: 30px 0; 
 }
 footer h4{
   margin-bottom: 25px;
