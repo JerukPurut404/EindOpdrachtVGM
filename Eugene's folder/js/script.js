@@ -12,6 +12,12 @@ function facebook() {
       "https://www.youtube.com/channel/UCnNuMO-7-TVI5ZEZwzU14Ew/featured?view_as=subscriber"
     );
   }
+function UnloadNL(){
+  window.location.replace("index.html");
+}
+function UnloadEN(){
+  window.location.replace("english.html")
+}
   let NavLinks = document.getElementById("NavLinks");
   function showMenu() {
     NavLinks.style.right = "0";

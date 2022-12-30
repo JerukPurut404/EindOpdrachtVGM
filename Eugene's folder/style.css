@@ -6,6 +6,7 @@
 
 html{
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 header
 {
@@ -23,18 +24,63 @@ header
   justify-content: center;
 }
 
+li{
+  color: white;
+}
 .nav-links{
   flex: 1;
   text-align: right;
 }
-.nav-links a{
-  color: aqua;
-  text-decoration: none;
+.nav-links li{
+  color: white;
+  text-decoration: none !important;
   font-size: 13px;
   list-style: none;
   display: inline-block;
   padding: 8px 12px;
   position: relative;
+}
+.nav-links li a {
+  text-decoration: none;
+  color: blanchedalmond;
+}
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+.nav-links .fi{
+  display: inline-block;
+  padding: 3px 12px;
+  position: relative;
+}
+
+.History{
+  width: 80;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+h1{
+  font-size: 36px;
+  font-weight: 600;
+}
+h2{
+  font-size: 24px;
+  font-weight: 600;
+}
+p{
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+li{
+  color: grey;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
 }
 
 /* Slideshow container */
