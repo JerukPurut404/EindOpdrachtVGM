@@ -1,17 +1,15 @@
-import { GameRender } from "./gamerender";
-import { GameLogic } from "./gamelogic";
-
-class game
+export class GameRender
 {
-    constructor()
+    constructor(game)
     {
+        this.game = game;
         this.canvas = document.getElementById("canvas");
         this.g = canvas.getContext("2d");
     }
     
     render()
     {
-        let g = this.g;
+    let g = this.g;
 
         g.fillstyle = "#2e6ede";
         g.fillrect(0, 0, canvas.clientWidth, canvas.clientHeight)
@@ -20,6 +18,3 @@ class game
         g.fillrect(0, 0, 10, 10)
     }
 }
-
-let game = new game()
-game.render();
