@@ -1,4 +1,4 @@
-export class GameRender
+export class gamerenderer
 {
     constructor(game)
     {
@@ -12,9 +12,9 @@ export class GameRender
     let g = this.g;
 
         g.fillstyle = "#2e6ede";
-        g.fillrect(0, 0, canvas.clientWidth, canvas.clientHeight)
+        g.fillrect(0, 0, canvas.clientWidth, canvas.clientHeight);
 
         g.fillstyle = "#leca07";
-        g.fillrect(0, 0, 10, 10)
+        g.fillrect(this.game.x, this.game.y, 10, 10);
     }
 }
