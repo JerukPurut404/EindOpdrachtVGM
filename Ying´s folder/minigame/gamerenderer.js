@@ -1,3 +1,4 @@
+
 export class gamerenderer
 {
     constructor(game)
@@ -15,6 +16,7 @@ export class gamerenderer
         g.fillrect(0, 0, canvas.clientWidth, canvas.clientHeight);
 
         g.fillstyle = "#leca07";
-        g.fillrect(this.game.x, this.game.y, 10, 10);
+        let player = this.game.player;
+        g.fillrect(player.x, player.y, player.w, player.h);
     }
 }
