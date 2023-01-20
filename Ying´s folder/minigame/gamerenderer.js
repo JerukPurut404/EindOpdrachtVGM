@@ -12,11 +12,11 @@ export class GameRenderer
     {
     let g = this.g;
 
-        g.fillstyle = "#2e6ede";
-        g.fillRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+        this.g.fillStyle = "#2e6ede";
+        this.g.fillRect(0, 0, this.canvas.clientWidth, this.canvas.clientHeight);
 
-        g.fillstyle = "#leca07";
+        this.g.fillStyle = "#1eca07";
         let player = this.game.player;
-        g.fillRect(player.x, player.y, player.w, player.h);
+        this.g.fillRect(player.x, player.y, player.w, player.h);
     }
 }

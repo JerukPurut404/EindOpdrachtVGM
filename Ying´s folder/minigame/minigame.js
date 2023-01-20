@@ -16,12 +16,8 @@ class Game
         let scope = this;
 
         console.log(this.renderer)
-        document.addEventListener("mousemove", function(event) {scope.logic.mouseMoved(event); })
+        this.renderer.canvas.addEventListener("mousemove", function(event) {scope.logic.mouseMoved(event); })
         setInterval(function () {scope.doGameFrame() }, 33)
-    }
-    mouseMoved(event)
-    {
-
     }
 
     doGameFrame()
