@@ -1,4 +1,4 @@
-import { GameRender } from "./gamerenderer";
+import { GameRenderer } from "./gamerenderer.js";
 import { GameLogic } from "./gamelogic.js";
 import { Rect } from "./rect.js";
 
@@ -7,7 +7,7 @@ class Game
     constructor()
     {
         this.logic = new GameLogic(this);
-        this.render = new GameRender(this);
+        this.renderer = new GameRenderer(this);
         this.player = new Rect(0, 0, 24, 24);
     }
 
@@ -15,8 +15,8 @@ class Game
     {   
         let scope = this;
 
-
-        this.renderer.c.addEventListener("mousemove", function(event) {scope.logic.mouseMoved(event); })
+        console.log(this.renderer)
+        this.renderer.addEventListener("mousemove", function(event) {scope.logic.mouseMoved(event); })
         setInterval(function () {scope.doGameFrame() }, 33)
     }
     mouseMoved(event)
@@ -27,7 +27,7 @@ class Game
     DoGameFrame()
     {
         this.logic.logic();
-        this.render.render();
+        this.renderer.render();
     }
 
     Background()
@@ -39,5 +39,5 @@ class Game
 
 let game = new Game()
 game.init();
-//game.render();
+game.render();
  

@@ -1,11 +1,11 @@
 
-export class gamerenderer
+export class GameRenderer
 {
     constructor(game)
     {
         this.game = game;
-        this.canvas = document.getElementById("canvas");
-        this.g = canvas.getContext("2d");
+        this.canvas = document.getElementById("duckcanvas");
+        this.g = this.canvas.getContext("2d");
     }
     
     render()
