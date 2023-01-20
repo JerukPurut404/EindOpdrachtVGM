@@ -24,6 +24,7 @@ class Game
     {
         this.logic.logic();
         this.renderer.render();
+        this.renderer.renderBox();
     }
 
     Background()
