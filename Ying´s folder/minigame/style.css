@@ -5,3 +5,8 @@ body {
     background-position: bottom;
     background-size: cover;
 }
+
+body > .canvas {
+    justify-content: space-between;
+    display: flex;
+}
