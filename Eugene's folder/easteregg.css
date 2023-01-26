@@ -56,3 +56,24 @@ footer {
   padding: 20px;
   text-align: center;
 }
+
+
+.gradient-button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 0 auto;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+#button1 {
+  background: linear-gradient(to right, #ff0000, #0000ff);
+}
+
+#button2 {
+  background: linear-gradient(to right, #00ff00, #ff00ff);
+}
