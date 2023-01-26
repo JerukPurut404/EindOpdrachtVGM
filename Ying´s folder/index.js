@@ -24,6 +24,7 @@ class Tile
     {
         this.div = div;
         this.goto = -1;
+        this.canvas = document.createElement("canvas");
     }
 }
 class Game
@@ -156,16 +157,25 @@ class Game
         }
     }
     
-    makeBoardDiv(x,y,tileDisplayNumber)
-    {
-        let div = document.createElement("div");
-        div.className = "tile";
-        div.style.left = x + "px";
-        div.style.top = y + "px";
-        div.textContent = tileDisplayNumber;      
-        this.boardDiv.appendChild(div);
+makeBoardDiv(x,y,tileDisplayNumber) {
+    let canvas = document.createElement("canvas");
+    canvas.className = "tile";
+    canvas.style.left = x + "px";
+    canvas.style.top = y + "px";
+    canvas.width = 50;
+    canvas.height = 50;
+    this.boardDiv.appendChild(canvas);
 
-        return div;
-    }
+    let ctx = canvas.getContext("2d");
+    ctx.fillStyle = "green";
+    ctx.fillRect(0, 0, 50, 50);
+    ctx.fillStyle = "black";
+    ctx.font = "20px Arial";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(tileDisplayNumber, 25, 25);
+
+    return canvas;
+}
 
 }
