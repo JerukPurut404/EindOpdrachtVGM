@@ -1,52 +1,81 @@
-function facebook() {
+class App {
+  constructor() {
+    this.NavLinks = document.getElementById("NavLinks");
+    this.imageContainer = document.getElementsByClassName("slideshow-container")[0];
+    this.images = this.imageContainer.querySelectorAll('img');
+    this.current = 0;
+    this.loaderContainer = document.querySelector('.loader-container');
+    this.init();
+  }
+
+  init() {
+    this.images[this.current].classList.remove('hidden');
+    document.getElementById('next').addEventListener('click', this.nextImage.bind(this));
+    document.getElementById('prev').addEventListener('click', this.prevImage.bind(this));
+    cheet("↑ ↑ ↓ ↓ ← → ← → b a", this.easterEgg.bind(this));
+    window.addEventListener('load', this.fadeOutLoader.bind(this));
+  }
+
+  facebook() {
     window.open("http://www.facebook.com/nationaalgamemuseum");
   }
-  function instagram() {
+
+  instagram() {
     window.open("https://instagram.com/NVGMuseum");
   }
-  function twitter() {
+
+  twitter() {
     window.open("https://twitter.com/NaVGMuseum");
   }
-  function youtube() {
-    window.open(
-      "https://www.youtube.com/channel/UCnNuMO-7-TVI5ZEZwzU14Ew/featured?view_as=subscriber"
-    );
+
+  youtube() {
+    window.open("https://www.youtube.com/channel/UCnNuMO-7-TVI5ZEZwzU14Ew/featured?view_as=subscriber");
   }
-function UnloadNL(){
-  window.location.replace("index.html");
-}
-function UnloadEN(){
-  window.location.replace("english.html")
-}
-  let NavLinks = document.getElementById("NavLinks");
-  function showMenu() {
-    NavLinks.style.right = "0";
+
+  UnloadNL(){
+    window.location.replace("index.html");
+  }
+
+  UnloadEN(){
+    window.location.replace("english.html");
+  }
+
+  showMenu() {
+    this.NavLinks.style.right = "0";
     console.log("Show Menu");
   }
-  function hideMenu() {
-    NavLinks.style.right = "-200px";
+
+  hideMenu() {
+    this.NavLinks.style.right = "-200px";
     console.log("Hide Menu");
   }
-  cheet("↑ ↑ ↓ ↓ ← → ← → b a", function () {
-    alert("Congratulations, You found our easter egg")
+
+  easterEgg() {
+    alert("Congratulations, You found our easter egg");
     window.open("easteregg.html");
-  });
-  let imageContainer = document.getElementsByClassName("slideshow-container")[0];
-  let images = imageContainer.querySelectorAll('img');
-  let current = 0;
-  images[current].classList.remove('hidden');
-  document.getElementById('next').addEventListener('click', 
-  function() {
-    images[current].classList.add('hidden');
-    current++;
-    if(current >= images.length)
-    {
-      current=0;
+  }
+
+  nextImage() {
+    this.images[this.current].classList.add('hidden');
+    this.current++;
+    if(this.current >= this.images.length) {
+      this.current = 0;
     }
-    images[current].classList.remove('hidden');
-  });
-  document.getElementById('prev').addEventListener('click', function() {
-    images[current].classList.add('hidden');
-    current = (current + images.length - 1) % images.length;
-    images[current].classList.remove('hidden');
-  });
+    this.images[this.current].classList.remove('hidden');
+  }
+
+  prevImage() {
+    this.images[this.current].classList.add('hidden');
+    this.current = (this.current + this.images.length - 1) % this.images.length;
+    this.images[this.current].classList.remove('hidden');
+  }
+
+  fadeOutLoader() {
+    this.loaderContainer.classList.add('fade-out');
+    this.loaderContainer.addEventListener('transitionend', () => {
+      this.loaderContainer.style.display = 'none';
+    });
+  }
+}
+
+const app = new App();
