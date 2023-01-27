@@ -119,7 +119,7 @@ class Text {
   Draw () {
     ctx.beginPath();
     ctx.fillStyle = this.c;
-    ctx.font = this.s + "px sans-serif";
+    ctx.font = this.s + "px lorem";
     ctx.textAlign = this.a;
     ctx.fillText(this.t, this.x, this.y);
     ctx.closePath();
@@ -130,7 +130,7 @@ class Text {
 function SpawnObstacle () {
   let size = RandomIntInRange(20, 70);
   let type = RandomIntInRange(0, 1);
-  let obstacle = new Obstacle(canvas.width + size, canvas.height - size, size, size, '#2484E4');
+  let obstacle = new Obstacle(canvas.width + size, canvas.height - size, size, size, '#FF1493');
 
   if (type == 1) {
     obstacle.y -= player.originalHeight - 10;
@@ -158,7 +158,7 @@ function Start () {
     highscore = localStorage.getItem('highscore');
   }
 
-  player = new Player(25, 0, 50, 50, '#FF5858');
+  player = new Player(25, 0, 50, 50, '#2A933D');
 
   scoreText = new Text("Score: " + score, 25, 25, "left", "#212121", "20");
   highscoreText = new Text("Highscore: " + highscore, canvas.width - 25, 25, "right", "#212121", "20");
