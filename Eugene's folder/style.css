@@ -121,6 +121,7 @@ li{
   width: 100%;
   height: 100%;
   transition: all 0.5s ease-in-out;
+  display: flex;
 }
 #prev{
   background-color: #4CAF50; /* Green */
@@ -145,6 +146,17 @@ li{
 }
 .slideshow-container img.hidden{
   left: 500px;
+}
+
+.image-subtext{
+  position: relative;
+  color: black;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 15px 33px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .button-header{
@@ -175,6 +187,10 @@ li{
   position: relative;
   top: 70px;
 }
+.arrow-container :hover{
+  transform: translateY(-10px);
+}
+
 .sale-btn{
   display: inline-block;
   text-decoration: none;
@@ -294,7 +310,7 @@ p{
 .row{
   margin-top: 5%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0 !important;
   margin: 0 !important;
 }

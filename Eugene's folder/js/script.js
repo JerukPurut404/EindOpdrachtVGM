@@ -3,6 +3,8 @@ class App {
     this.NavLinks = document.getElementById("NavLinks");
     this.imageContainer = document.getElementsByClassName("slideshow-container")[0];
     this.images = this.imageContainer.querySelectorAll('img');
+    this.imageDescriptions = ['Wij hebben ook nog schietspellen die je alleen of met je vrienden kan spelen, het lijkt net alsof het voor je ogen gebeurt hoe bizar?!?', 'Hierbij nog een extra bij de air hockey doordmiddel dat het zo populair is!', 'We hebben veel leuke games en veel met 2 players!!!', 'Ook nog een leuke air hockey spel voor 2 spelers waarbij je tegen je vrienden kan spelen en zien wie beter is', 'Hierbij hebben wij moterbikes waarbij jij en je vrienden samen tegen elkaar kunnen gaan strijden '];
+    this.imageSubtext = document.querySelector('.image-subtext');
     this.current = 0;
     this.loaderContainer = document.querySelector('.loader-container');
     this.init();
@@ -62,12 +64,14 @@ class App {
       this.current = 0;
     }
     this.images[this.current].classList.remove('hidden');
+    this.imageSubtext.innerText = this.imageDescriptions[this.current];
   }
 
   prevImage() {
     this.images[this.current].classList.add('hidden');
     this.current = (this.current + this.images.length - 1) % this.images.length;
     this.images[this.current].classList.remove('hidden');
+    this.imageSubtext.innerText = this.imageDescriptions[this.current];
   }
 
   fadeOutLoader() {
