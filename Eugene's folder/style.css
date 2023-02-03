@@ -186,9 +186,8 @@ li{
   text-align: center;
   position: relative;
   top: 70px;
-}
-.arrow-container :hover{
-  transform: translateY(-10px);
+  animation-name: button;
+  
 }
 
 .sale-btn{
