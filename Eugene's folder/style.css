@@ -22,6 +22,7 @@
 html{
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 header
 {
@@ -34,7 +35,7 @@ header
   overflow-x: hidden;
 }
 
-.image-container{
+.image-container {
   display: flex;
   justify-content: center;
   padding-top: 10px;
@@ -50,7 +51,7 @@ li{
 .nav-links li{
   color: white;
   text-decoration: none !important;
-  font-size: 13px;
+  font-size: 1.5rem;
   list-style: none;
   display: inline-block;
   padding: 8px 12px;
@@ -79,25 +80,25 @@ li{
   text-align: center;
   padding-top: 100px;
 }
-h1{
-  font-size: 36px;
+.History h1{
+  font-size: 3rem;
   font-weight: 600;
 }
-h2{
-  font-size: 24px;
-  font-weight: 600;
+.History h2{
+  font-size: 2rem;
+  font-weight: 550;
 }
-p{
+.History p{
   color: #777;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 1.2rem;
+  font-weight: 350;
   line-height: 22px;
   padding: 10px;
 }
 li{
   color: grey;
-  font-size: 14px;
-  font-weight: 300;
+  font-size: 1.3rem;
+  font-weight: 350;
   line-height: 22px;
   padding: 10px;
 }
@@ -107,6 +108,7 @@ li{
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  padding-top: 10px;
 }
 .slideshow-container figure{
   position: relative;
@@ -131,7 +133,7 @@ li{
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.5rem;
 }
 #next{
   background-color: #4CAF50; /* Green */
@@ -141,7 +143,7 @@ li{
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 1.5rem;
 
 }
 .slideshow-container img.hidden{
@@ -151,7 +153,7 @@ li{
 .image-subtext{
   position: relative;
   color: black;
-  font-size: 14px;
+  font-size: 1.5rem;
   font-weight: 300;
   line-height: 22px;
   padding: 15px 33px;
@@ -175,11 +177,11 @@ li{
   text-align: center;
 }
 .text-box h1{
-  font-size: 62px;
+  font-size: 4rem;
 }
 .text-box p{
-  margin: 10px 0 40px;
-  font-size: 14px;
+  margin: 40px 0 40px;
+  font-size: 1.5rem;
   color: #fff;
 }
 .arrow-container {
@@ -196,7 +198,7 @@ li{
   color: #fff;
   border: 1px solid #fff;
   padding: 12px 34px;
-  font-size: 13px;
+  font-size: 1.3rem;
   background: transparent;
   position: relative;
   cursor: pointer;
@@ -213,13 +215,23 @@ li{
   padding: 40px;
 }
 
+.Minigame h1{
+  font-size: 3rem;
+}
+
+.Minigame p{
+  font-size: 1.5rem;
+}
+
+
 .game-btn{
   display: inline-block;
   text-decoration: none;
   color: black;
   border: 1px solid black;
   padding: 12px 34px;
-  font-size: 13px;
+  margin: 20px;
+  font-size: 1.3rem;
   background: rosybrown;
   position: relative;
   cursor: pointer;
@@ -248,7 +260,7 @@ nav .fa{
     padding: 0px;
   }
   .text-box h1{
-    font-size: 20px;
+    font-size: 2.1rem;
   }
   .nav-links a{
     display: block;
@@ -272,7 +284,7 @@ nav .fa{
     top: 70px;
     right: 15px;
     margin: 10px;
-    font-size: 22px;
+    font-size: 1.8rem;
     cursor: pointer;
     position: absolute;
     top: 0;
@@ -291,17 +303,17 @@ nav .fa{
   text-align: center;
   padding-top: 100px;
 }
-h1{
-  font-size: 36px;
+.TimeSlots h1{
+  font-size: 2.9rem;
   font-weight: 600;
 }
-h2{
-  font-size: 24px;
+.TimeSlots h2{
+  font-size: 1.8rem;
   font-weight: 600;
 }
-p{
+.TimeSlots p{
   color: #777;
-  font-size: 14px;
+  font-size: 1.2rem;
   font-weight: 300;
   line-height: 22px;
   padding: 10px;
@@ -322,8 +334,9 @@ p{
   box-sizing: border-box;
   transition: 0.5s;
 }
-.h3{
+.TimeSlots .h3{
   text-align: center;
+  font-size: 1rem;
   font-weight: 600;
   margin: 10px 0;
 }
@@ -340,9 +353,12 @@ p{
 }
 
 .container h2{
+  font-size: 3rem;
   text-align: center;
 }
 .container p{
+  font-size: 1.8rem;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -353,6 +369,14 @@ p{
   margin-top: 20px;
   margin-bottom: 20px;
   padding-top: 100px;
+  text-align: center;
+}
+.Reviews h1{
+  font-size: 3rem;
+  text-align: center;
+}
+.Reviews p{
+  font-size: 1.5rem;
   text-align: center;
 }
 .Reviews-col{
@@ -372,11 +396,14 @@ p{
   margin-right: 30px;
   border-radius: 50%;
 }
+
 .Reviews-col p{
+  font-size: 1.3rem;
   padding: 0;
+  text-align: left;
 }
 .Reviews-col h3{
-  margin-top: 15px;
+  margin-top: 2.3rem;
   text-align: left;
 }
 @media(max-width: 700px){
@@ -394,6 +421,7 @@ p{
 
 .Contacts p{
   color: black;
+  font-size: 1.5rem;
 }
 footer{
   width: 100%;
@@ -403,11 +431,13 @@ footer{
 footer h4{
   margin-bottom: 25px;
   margin-top: 20px;
+  font-size: 1.5rem;
   font-weight: 600;
 }
-.footers-icons .fa{
+.Footers-icons .fa{
   color: #f44336;
   margin: 0 13px;
   cursor: pointer;
   padding: 18px 0;
+  font-size: 1.5rem;
 }
