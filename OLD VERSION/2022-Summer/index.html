@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://cdn.rawgit.com/namuol/cheet.js/master/cheet.min.js"
+      type="text/javascript"
+    ></script>
+    <title>NVGM</title>
+  </head>
+  <body>
+    <script defer src="js/script.js" type="text/javascript"></script>
+    <header>
+      <nav class="header-base">
+        <figure class="image-container">
+          <a href="index.html">
+            <img class="image-container" src="images/logo-nvgm.png" alt="logo"/>
+          </a>
+        </figure>
+        <div class="nav-links" id="NavLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul class="button-header">
+            <a href="">Home</a>
+            <a href="https://www.nationaalvideogamemuseum.nl/onze-geschiedenis">History</a>
+            <a href="#Contacts">Contact</a>
+            <a href="#Gallery">Gallery</a>
+            <a href="#Tijden">Tijden</a>
+            <a href="#Reviews">Reviews</a>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box">
+        <h1>Het Nationaal Videogame Museum</h1>
+        <p>
+          Het Nationaal Videogame Museum is 'the place to be' voor iedereen die
+          meer wil weten (én beleven) over de geschiedenis, maatschappelijke en
+          culturele kant van videogames. Het museum laat haar bezoekers ook de
+          games van morgen ervaren. Gamers van jong tot oud zijn welkom om te
+          spelen, ontdekken, leren en ervaringen online te delen.
+        </p>
+        <a href="https://www.nationaalvideogamemuseum.nl/tickets" class="sale-btn">Koop nu Tickets</a>
+      </div>
+    </header>
+    <section class="TimeSlots">
+      <h1 id="Tijden">Tijdslots</h1>
+      <h2>We werken met vaste tijdslots in het museum:</h2>
+      <p>
+        In de schoolvakanties (regio Midden) zijn wij ook op maandag en dinsdag
+        geopend. Kinderen jonger dan 10 jaar mogen alleen onder begeleiding het
+        museum in. Tickets voor kinderen en begeleiders zijn dezelfde prijs.
+        Kijk op onze ticketpagina voor de tarieven.
+      </p>
+      <div class="row">
+        <div class="TimeSlots-col">
+          <h3>Maandag</h3>
+          <p>Gesloten</p>
+        </div>
+        <div class="TimeSlots-col">
+          <h3>Dinsdag</h3>
+          <p>Gesloten</p>
+        </div>
+        <div class="TimeSlots-col">
+          <h3>Woensdag</h3>
+          <p><time>10:00</time>-<time>12:00</time> | <time>12:00</time>-<time>14:00</time> | <time>14:00</time>-<time>16:00</time> | <time>16:00</time>-<time>18:00</time></p>
+        </div>
+        <div class="TimeSlots-col">
+          <h3>Donderdag</h3>
+          <p><time>10:00</time>-<time>12:00</time> | <time>12:00</time>-<time>14:00</time> | <time>14:00</time>-<time>16:00</time> | <time>16:00</time>-<time>18:00</time></p>
+        </div>
+        <div class="TimeSlots-col">
+          <h3>Vrijdag</h3>
+          <p>
+            <time>10:00</time>-<time>12:00</time> | <time>12:00</time>-<time>14:00</time> | <time>14:00</time>-<time>16:00</time> | <time>16:00</time>-<time>18:00</time> | <time>18:00</time>-<time>21:00</time>
+          </p>
+        </div>
+        <div class="TimeSlots-col">
+          <h3>Zaterdag</h3>
+          <p>
+            <time>10:00</time>-<time>12:00</time> | <time>12:00</time>-<time>14:00</time> | <time>14:00</time>-<time>16:00</time> | <time>16:00</time>-<time>18:00</time> | <time>18:00</time>-<time>21:00</time>
+          </p>
+        </div>
+        <div class="TimeSlots-col">
+          <h3>Zondag</h3>
+          <p><time>12:00</time>-<time>14:00</time> | <time>14:00</time>-<time>16:00</time> | <time>16:00</time>-<time>18:00</time></p>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <h2 id="Gallery">Gallery</h2>
+      <p>Hier zijn onze gallery van het museum</p>
+    </div>
+    <div class="slideshow-container">
+      <button id="prev">Previous</button>
+      <figure>
+        <img src="images/menu(1).jpg" alt="Image 1">
+        <img src="images/menu(2).jpg" alt="Image 2" class="hidden">
+        <img src="images/menu(3).jpg" alt="Image 3" class="hidden">
+        <img src="images/menu(4).jpg" alt="Image 4" class="hidden">
+        <img src="images/menu(5).jpg" alt="Image 5" class="hidden">
+      </figure>
+      <button id="next">Next</button>
+    </div>
+    <section class="Reviews">
+      <h1 id="Reviews">Reviews</h1>
+      <p>Hier zijn de reviews van het museum</p>
+      <div class="Reviews-col">
+        <img src="images/profile_pic.jpg" alt="Profile Picutre 1"/>
+        <div>
+          <p>
+            Ik keek mijn ogen uit, wat een super leuk museum. Heerlijk om aan de
+            slag te kunnen met deze games. Het was als vroeger naar een
+            arcadehal gaan zonder al die guldens en dan hebben we het niet eens
+            over de retro gameconsoles die er plenty staan. Ik hoop dat we nog
+            veel meer te zien krijgen.
+          </p>
+          <h3>M.l. de Bruijn</h3>
+        </div>
+      </div>
+      <div class="Reviews-col">
+        <img src="images/profile_pic(2).jpg" alt="Profile Picture 2"/>
+        <div>
+          <p>
+            Samen met 4 jongens (10 t/m 12 jaar) geweest. We hebben allemaal
+            genoten. Leuke games en veel nostalgie (tenminste voor mij). Wij
+            gaan absoluut nog een keer, alleen vanuit Groningen is het wel een
+            stukje rijden, maar zeker de moeite waard.
+          </p>
+          <h3>Iwan Bijmholt</h3>
+        </div>
+      </div>
+      <div class="Reviews-col">
+        <img src="images/profile_pic(3).jpg" alt="Profile Picture 3"/>
+        <div>
+          <p>
+            Een plek waar je even terug in de tijd kan gaan, van atari tot
+            PlayStation. Is hier genoeg te doen voor jong en oud. Daar zorgen de
+            arcade kasten ook voor in een podracer racen of Tekken tegen mensen
+            spelen. Neem hier vooral een kijkje en laat je overrompelen door de
+            game wereld.
+          </p>
+          <h3>Frank Pronk</h3>
+        </div>
+      </div>
+    </section>
+    <section class="Contacts">
+        <h2 id="Contacts">Contacts</h2>
+        <p>Algemene vragen:<a href="mailto:info@nationaalvideogamemuseum.nl">info@nationaalvideogamemuseum.nl</a></p>
+        <p>Pers:<a href="mailto:pers@nationaalvideogamemuseum.nl">pers@nationaalvideogamemuseum.nl</a></p>
+        <p>Zakelijk:<a href="mailto:zakelijk@nationaalvideogamemuseum.nl">zakelijk@nationaalvideogamemuseum.nl</a></p>
+      </div>
+    </section>
+    <footer>
+      <h4>Bezoek onze Socials</h4>
+      <div class="Footers-icons">
+        <i class="fa fa-facebook" onclick="facebook()"></i>
+        <i class="fa fa-instagram" onclick="instagram()"></i>
+        <i class="fa fa-twitter" onclick="twitter()"></i>
+        <i class="fa fa-youtube" onclick="youtube()"></i>
+      </div>
+    </footer>
+  </body>
+</html>
